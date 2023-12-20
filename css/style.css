@@ -1,0 +1,36 @@
+/*Class de subtitulo de "Acerca de Nosotros"*/
+.animacion {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: left;
+    color: midnightblue;
+    transition: transform 1s ease-in-out;
+}
+
+h2:hover {
+    transform: translateX(10px); 
+}
+/*Class de parrafos "Acerca de Nosotros"*/
+.parrafo-contenedor {
+    margin: 0;
+    margin-right: 25%;
+    font-family: 'Open Sans', sans-serif;
+    display: flex;
+    font-size: flex;
+    justify-content: left;
+    text-align: left;
+    color: darkslateblue;
+}
+
+/* Estilos para los cuadros alrededor de los párrafos */
+.parrafo-contenedor {
+    display: inline-block;
+    margin: 10px;
+    padding: 20px;
+    background-color: burlywood;
+    transition: transform 0.3s ease-in-out;
+}
+
+.parrafo-contenedor:hover {
+    transform: scale(1.05);
+}
