@@ -1,3 +1,9 @@
+/*Configuración global*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 /*Class de subtitulo de "Acerca de Nosotros"*/
 .animacion {
     font-family: 'Roboto', sans-serif;
@@ -7,7 +13,7 @@
     transition: transform 1s ease-in-out;
 }
 
-h2:hover {
+.animacion:hover {
     transform: translateX(10px); 
 }
 /*Class de parrafos "Acerca de Nosotros"*/
@@ -34,3 +40,94 @@ h2:hover {
 .parrafo-contenedor:hover {
     transform: scale(1.05);
 }
+
+/* Estilos footer */
+#map {
+    height: 250px;
+    width: 80%; /* Ancho completo */
+    border-radius: 1rem;
+  }
+  .link{
+    text-decoration: none;
+    color: #DEB887;
+  }
+  footer{
+    background-color: rgb(17, 17, 17);
+    color: rgb(245, 241, 241);
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1.5fr 2.5fr;
+    gap: 2rem;
+  }
+  
+  .form-section, .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .input-email{
+    width: 90%;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    border-radius: 1rem;
+    border: 2px solid rgb(245, 241, 241);
+    display: flex;
+    justify-content: space-between;
+  }
+  .input-email #email{
+    width: 90%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: rgb(245, 241, 241);
+  }
+  .submit{
+    width: 10%;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: rgb(245, 241, 241);
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  .accordion{
+    margin: 2rem 0;
+  }
+  .accordion h2{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgb(245, 241, 241);
+  
+  }
+  .accordion-button:not(.collapsed)::after {
+    background-image: url("/img/x.svg") !important;
+    filter: grayscale(100%) invert(100%);
+  }
+  .accordion-button::after {
+    filter: grayscale(100%);
+  }
+  .accordion-button{
+    box-shadow: none !important;
+  }
+  .accordion-button:not(.collapsed){
+    background-color: #161819 !important;
+    box-shadow: none !important;
+    color: rgb(245, 241, 241) !important;
+  }
+  @media screen and (max-width: 768px) {
+    footer{
+      grid-template-columns: 1fr;
+      justify-content: center;
+      align-items: center;
+    }
+    form{
+      width: 100%;
+    }
+    .form-section, .info, form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  }
