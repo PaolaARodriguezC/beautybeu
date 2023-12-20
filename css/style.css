@@ -137,3 +137,49 @@ h2:hover {
       text-align: center;
     }
   }
+
+  .carousel-inner .carousel-item img
+{
+    /* width: 50% !important; */
+    height: 520px !important;
+
+}
+
+
+@media (min-width: 360px) and (max-width: 801px)
+{
+    .d-md-block 
+    {
+        display: block !important;
+    }
+
+    .carousel-inner .carousel-item img
+    {
+    /* width: 50% !important; */
+    height: 400px !important;
+    }
+
+    .TextoImg
+    {
+        font-size: 15px;
+    }
+}
+
+@media (min-width: 834px) and (max-width: 1194px)
+{
+    .d-md-block 
+    {
+        display: block !important;
+    }
+
+    .carousel-inner .carousel-item img
+    {
+    /* width: 50% !important; */
+    height: 500px !important;
+    }
+
+    .TextoImg
+    {
+        font-size: 25px;
+    }
+}
