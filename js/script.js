@@ -23,6 +23,30 @@ window.onload = function() {
   }); 
 };
 
+//Swal
+document.getElementById('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    Swal.fire({
+      position: "top-end",
+      icon: "success",
+      title: "!Gracias¡ Te suscribiste correctamente",
+      showConfirmButton: false,
+      timer: 3000
+    });
+    document.getElementById('email').value = '';
+  });
+  
+  
+  document.getElementById('mostrarTerminos').addEventListener('click', function(event) {
+    event.preventDefault(); 
+    Swal.fire({
+      title: 'Términos y Condiciones',
+      html: '<p class="scroll-element">Al utilizar este servicio, aceptas cumplir con los términos y condiciones establecidos. Este servicio se proporciona tal cual y no nos hacemos responsables de ningún daño directo, indirecto, incidental, especial, emergente o punitivo, incluidos, entre otros, daños personales, lucro cesante, interrupción del negocio, pérdida de programas o datos en tu equipo, u otros daños similares, ya sea que se notifiquen o sepan de la posibilidad de tales daños, resultantes del uso o la imposibilidad de utilizar este servicio. Nos reservamos el derecho de modificar, suspender o terminar el servicio en cualquier momento sin previo aviso.</p>',
+      confirmButtonText: 'Aceptar',
+      confirmButtonColor: "#DEB887",
+    });
+  });
+
 // Map config start
 
 let bounds = L.latLngBounds([
@@ -37,15 +61,12 @@ let bounds = L.latLngBounds([
     maxBoundsViscosity: 1.0,
   });
   
-  let Stadia_AlidadeSmoothDark = L.tileLayer(
-    "https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.{ext}",
-    {
-      minZoom: 0,
-      maxZoom: 20,
-      ext: "png",
-      bounds: bounds,
-    }
-  ).addTo(map);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  minZoom: 0,
+  maxZoom: 20,
+  ext: 'png',
+  bounds: bounds
+}).addTo(map);
   
   let lugares = [
     { nombre: "Plaza de Bolívar", coordenadas: [4.5981, -74.0758] },

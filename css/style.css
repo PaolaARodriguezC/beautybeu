@@ -1,8 +1,8 @@
 /*Configuración global*/
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 /*Fondo Acerca de Nosotros*/
 .contenedorADN {
@@ -10,7 +10,7 @@
 }
 /*Class de subtitulo de "Acerca de Nosotros"*/
 .animacion {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   display: flex;
   margin: 20px;
   justify-content: left;
@@ -18,15 +18,15 @@
   transition: transform 1s ease-in-out;
 }
 
-h2:hover {
-  transform: translateX(10px); 
+.animacion:hover {
+  transform: translateX(10px);
 }
 /*Class de parrafos "Acerca de Nosotros"*/
 .parrafo-contenedor {
   margin: 0;
-  display:flex;
+  display: flex;
   margin-right: 25%;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   justify-content: left;
   text-align: center;
   color: darkslateblue;
@@ -49,137 +49,146 @@ h2:hover {
 
 /* Estilos footer */
 #map {
-    height: 250px;
-    width: 80%; /* Ancho completo */
-    border-radius: 1rem;
+  height: 250px;
+  width: 80%; /* Ancho completo */
+  border-radius: 1rem;
+}
+.link {
+  text-decoration: none;
+  color: #deb887;
+}
+footer {
+  background-color: rgb(17, 17, 17);
+  color: rgb(245, 241, 241);
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: 1.5fr 2.5fr;
+  gap: 2rem;
+}
+
+.form-section,
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.input-email {
+  width: 90%;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border-radius: 1rem;
+  border: 2px solid rgb(245, 241, 241);
+  display: flex;
+  justify-content: space-between;
+}
+.input-email #email {
+  width: 90%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: rgb(245, 241, 241);
+}
+.submit {
+  width: 10%;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: rgb(245, 241, 241);
+  cursor: pointer;
+  font-size: 1rem;
+}
+.accordion {
+  margin: 2rem 0;
+}
+.accordion h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgb(245, 241, 241);
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url("/img/x.svg") !important;
+  filter: grayscale(100%) invert(100%);
+}
+.accordion-button::after {
+  filter: grayscale(100%);
+}
+.accordion-button {
+  box-shadow: none !important;
+}
+.accordion-button:not(.collapsed) {
+  background-color: #161819 !important;
+  box-shadow: none !important;
+  color: rgb(245, 241, 241) !important;
+}
+.scroll-element {
+  max-height: 400px;
+  overflow-y: scroll;
+}
+.social a {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: rgb(245, 241, 241);
+  padding: 1rem;
+}
+.terms-1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+}
+@media screen and (max-width: 768px) {
+  footer {
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
   }
-  .link{
-    text-decoration: none;
-    color: #DEB887;
+  form {
+    width: 100%;
   }
-  footer{
-    background-color: rgb(17, 17, 17);
-    color: rgb(245, 241, 241);
-    padding: 2rem;
-    display: grid;
-    grid-template-columns: 1.5fr 2.5fr;
-    gap: 2rem;
-  }
-  
-  .form-section, .info{
+  .form-section,
+  .info,
+  form {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
   }
-  .input-email{
-    width: 90%;
-    padding: 0.5rem;
-    margin: 1rem 0;
-    border-radius: 1rem;
-    border: 2px solid rgb(245, 241, 241);
-    display: flex;
-    justify-content: space-between;
-  }
-  .input-email #email{
-    width: 90%;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    color: rgb(245, 241, 241);
-  }
-  .submit{
-    width: 10%;
-    border: none;
-    outline: none;
-    background-color: transparent;
-    color: rgb(245, 241, 241);
-    cursor: pointer;
-    font-size: 1rem;
-  }
-  .accordion{
-    margin: 2rem 0;
-  }
-  .accordion h2{
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: rgb(245, 241, 241);
-  
-  }
-  .accordion-button:not(.collapsed)::after {
-    background-image: url("/img/x.svg") !important;
-    filter: grayscale(100%) invert(100%);
-  }
-  .accordion-button::after {
-    filter: grayscale(100%);
-  }
-  .accordion-button{
-    box-shadow: none !important;
-  }
-  .accordion-button:not(.collapsed){
-    background-color: #161819 !important;
-    box-shadow: none !important;
-    color: rgb(245, 241, 241) !important;
-  }
-  @media screen and (max-width: 768px) {
-    footer{
-      grid-template-columns: 1fr;
-      justify-content: center;
-      align-items: center;
-    }
-    form{
-      width: 100%;
-    }
-    .form-section, .info, form{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-    }
-  }
-
-  .carousel-inner .carousel-item img
-{
-    /* width: 50% !important; */
-    height: 520px !important;
-
 }
 
+.carousel-inner .carousel-item img {
+  /* width: 50% !important; */
+  height: 520px !important;
+}
 
-@media (min-width: 360px) and (max-width: 801px)
-{
-    .d-md-block 
-    {
-        display: block !important;
-    }
+@media (min-width: 360px) and (max-width: 801px) {
+  .d-md-block {
+    display: block !important;
+  }
 
-    .carousel-inner .carousel-item img
-    {
+  .carousel-inner .carousel-item img {
     /* width: 50% !important; */
     height: 400px !important;
-    }
+  }
 
-    .TextoImg
-    {
-        font-size: 15px;
-    }
+  .TextoImg {
+    font-size: 15px;
+  }
 }
 
-@media (min-width: 834px) and (max-width: 1194px)
-{
-    .d-md-block 
-    {
-        display: block !important;
-    }
+@media (min-width: 834px) and (max-width: 1194px) {
+  .d-md-block {
+    display: block !important;
+  }
 
-    .carousel-inner .carousel-item img
-    {
+  .carousel-inner .carousel-item img {
     /* width: 50% !important; */
     height: 500px !important;
-    }
+  }
 
-    .TextoImg
-    {
-        font-size: 25px;
-    }
+  .TextoImg {
+    font-size: 25px;
+  }
 }
