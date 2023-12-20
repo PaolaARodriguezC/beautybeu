@@ -4,41 +4,47 @@
     margin: 0;
     box-sizing: border-box;
 }
+/*Fondo Acerca de Nosotros*/
+.contenedorADN {
+  background-color: black;
+}
 /*Class de subtitulo de "Acerca de Nosotros"*/
 .animacion {
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    justify-content: left;
-    color: midnightblue;
-    transition: transform 1s ease-in-out;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  margin: 20px;
+  justify-content: left;
+  color: midnightblue;
+  transition: transform 1s ease-in-out;
 }
 
-.animacion:hover {
-    transform: translateX(10px); 
+h2:hover {
+  transform: translateX(10px); 
 }
 /*Class de parrafos "Acerca de Nosotros"*/
 .parrafo-contenedor {
-    margin: 0;
-    margin-right: 25%;
-    font-family: 'Open Sans', sans-serif;
-    display: flex;
-    font-size: flex;
-    justify-content: left;
-    text-align: left;
-    color: darkslateblue;
+  margin: 0;
+  display:flex;
+  margin-right: 25%;
+  font-family: 'Open Sans', sans-serif;
+  justify-content: left;
+  text-align: center;
+  color: darkslateblue;
 }
 
 /* Estilos para los cuadros alrededor de los párrafos */
 .parrafo-contenedor {
-    display: inline-block;
-    margin: 10px;
-    padding: 20px;
-    background-color: burlywood;
-    transition: transform 0.3s ease-in-out;
+  display: inline-block;
+  margin: 10px;
+  padding: 20px;
+  background-color: rgba(147, 112, 219, 0.1);
+  transition: transform 0.6s ease-in-out;
+  max-width: 1030px;
+  border-radius: 19px;
 }
 
 .parrafo-contenedor:hover {
-    transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 /* Estilos footer */

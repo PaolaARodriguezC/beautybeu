@@ -1,26 +1,26 @@
 //Efecto en el subtitulo "acerca de Nosotros"
 window.onload = function() {
-    var titulo = document.getElementById('titulo');
-    titulo.style.transition = 'transform 1s ease-in-out';
-    titulo.style.transform = 'translateX(50px)';
+  var titulo = document.getElementById('titulo');
+  titulo.style.transition = 'transform 1s ease-in-out';
+  titulo.style.transform = 'translateX(50px)';
 };
 //efecto en los parrafos que estan en "Acerca de Nosotros"
 window.onload = function() {
-    var parrafos = document.querySelectorAll('.parrafo-container');
-    
-    parrafos.forEach(function(parrafo) {
-        parrafo.style.transition = 'transform 0.3s ease-in-out';
-    });
+  var parrafos = document.querySelectorAll('.parrafo-container');
+  
+  parrafos.forEach(function(parrafo) {
+      parrafo.style.transition = 'transform 0.6s ease-in-out';
+  });
 
-    parrafos.forEach(function(parrafo) {
-        parrafo.addEventListener('mouseover', function() {
-            parrafo.style.transform = 'scale(05.02)';
-        });
+  parrafos.forEach(function(parrafo) {
+      parrafo.addEventListener('mouseenter', function() {
+          parrafo.style.transform = 'scale(1.05)';
+      });
 
-        parrafo.addEventListener('mouseout', function() {
-            parrafo.style.transform = 'scale(1)';
-        });
-    });
+      parrafo.addEventListener('mouseleave', function() {
+          parrafo.style.transform = 'scale(1)';
+      });
+  }); 
 };
 
 // Map config start
